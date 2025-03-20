@@ -76,9 +76,9 @@ public class Ports{
         listOfPortNames.add("HTTP");
         listOfPortNames.add("HTTPS");
         listOfPortNames.add("POP3");
-        listOfPortNames.add("NetBIOS1");
-        listOfPortNames.add("NetBIOS2");
-        listOfPortNames.add("NetBIOS3");
+        listOfPortNames.add("NetBIOS Name");
+        listOfPortNames.add("NetBIOS Datagram");
+        listOfPortNames.add("NetBIOS Session");
         listOfPortNames.add("IMAP");
         listOfPortNames.add("SNMP1");
         listOfPortNames.add("SNMP2");
