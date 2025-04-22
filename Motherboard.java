@@ -1,3 +1,4 @@
+// MOTHERBOARD DIAGRAM FROM TutorialsWeb: https://www.tutorialsweb.com/CertNotes/CompTIA-cert/A+/aplus-ess-3.htm
 import javax.swing.*;
 import java.util.Scanner;
 import java.util.Random;
@@ -11,16 +12,21 @@ public class Motherboard
 
     Motherboard() 
   {
+    // Get diagrams
     JFrame noLabel = new JFrame("Non Labeled Diagram");
     ImageIcon onlyNumberedDiagram = new ImageIcon("motherboard_without_key.gif");
     JFrame yesLabel = new JFrame("Labeled Diagram");
-    ImageIcon labeledDiagram = new ImageIcon("aplus-3.gif");
+    ImageIcon labeledDiagram = new ImageIcon("motherboard_with_key.gif");
+
+    // Make unlabeled diagram visible for the quiz
     noLabel.add(new JLabel(onlyNumberedDiagram));
     noLabel.pack();
     noLabel.setVisible(true);
 
+    // Play quiz
     Quiz();
 
+    // Get rid of unlabeled diagram and make labeled diagram visible aftr finishing quiz
     noLabel.setVisible(false);
     yesLabel.add(new JLabel(labeledDiagram));
     yesLabel.pack();
@@ -30,6 +36,7 @@ public class Motherboard
   public void Quiz(){
     LinkedList<Integer> order = setOrderOfQuestions();
     Scanner sc = new Scanner(System.in);
+
     for (int i = 0; i < labelNames.length; i++){
         int currentQuestion = order.poll();
         int attempts = 3;
@@ -56,6 +63,7 @@ public class Motherboard
     }
   }
 
+  // Randomize order of questions, using a Set to avoid duplicates
   LinkedList<Integer> setOrderOfQuestions(){
     Random rand = new Random();
     LinkedHashSet<Integer> orderSet = new LinkedHashSet<>();
