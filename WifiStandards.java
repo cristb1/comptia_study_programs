@@ -124,7 +124,7 @@ public class WifiStandards {
                 System.out.println("Yay!");
             }else{
                 System.out.println("Nope :(");
-                System.out.println("The bandwidth of 802.11" + listStandards.get(atQuestion).standard + " is " + listStandards.get(atQuestion).bandwidths + listStandards.get(atQuestion).getBitsPerSecond(myAnswerString));
+                System.out.println("The bandwidth of 802.11" + listStandards.get(atQuestion).standard + " is " + listStandards.get(atQuestion).bandwidths + listStandards.get(atQuestion).unit);
             }
 
             listStandards.remove(listStandards.get(atQuestion));
