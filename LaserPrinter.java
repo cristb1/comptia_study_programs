@@ -1,18 +1,20 @@
 import java.util.Scanner;
 
 public class LaserPrinter {
-    // 
     public String process[] = {"Charging","Exposing","Developing","Transferring","Fusing","Cleaning"};
     public void Quiz(){
         String answer;
         for(int i = 0; i < process.length; i++){
             printList();
-            System.out.println("\nWhich process is " + (i+1) + "?\n");
+            // Asks processes in order
+            System.out.println("\nWhich process is Step " + (i+1) + "?\n");
+            // User types answer from list
             answer = userInput();
-            if(answer.equals(process[i])){
+            // Checks if chosen answer is correct
+            if(answer.equalsIgnoreCase(process[i])){
                 System.out.println("\nCorrect!\n");
             }else{
-                System.out.println("\nNah, the process is " + process[i] + "\n");
+                System.out.println("\nNope, the process is " + process[i] + "\n");
             }
         }
     }
@@ -24,6 +26,7 @@ public class LaserPrinter {
     }
 
     public void printList(){
+        // May randomize list later
         System.out.println("Steps:\n");
         System.out.println("Fusing\nCharging\nExposing\nCleaning\nDeveloping\nTransferring");
     }
